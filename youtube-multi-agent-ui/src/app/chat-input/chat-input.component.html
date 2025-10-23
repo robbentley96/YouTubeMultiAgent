@@ -1,0 +1,7 @@
+<form class="chat-bar-container">
+  <mat-form-field class="chat-bar">
+    <mat-label>Message</mat-label>
+    <input matInput autocomplete="off" type="text" placeholder="Type Message Here..." [(ngModel)]="messageText" name="messageText" (keyup.enter)="onSendMessage()">
+    <mat-icon matSuffix class="send-icon" (click)="onSendMessage()">send</mat-icon>
+  </mat-form-field>
+</form>

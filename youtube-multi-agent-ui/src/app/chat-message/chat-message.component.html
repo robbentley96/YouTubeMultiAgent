@@ -1,0 +1,18 @@
+<div
+  class="message"
+  [ngClass]="{ human: message.sender === 'human', ai: message.sender === 'ai' }"
+>
+  <p>{{ message.text }}</p>
+  @if(message.videos && message.videos.length > 0) {
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Videos</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="video-container">
+      @for(video of message.videos; track video.id) {
+      <app-video [video]="video"></app-video>
+      }
+    </div>
+  </mat-expansion-panel>
+  }
+</div>

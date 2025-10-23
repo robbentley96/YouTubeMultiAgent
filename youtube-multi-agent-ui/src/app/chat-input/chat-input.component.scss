@@ -1,0 +1,20 @@
+.chat-bar-container {
+  max-width: 100%;
+  margin: 1em 3em 0 3em;
+}
+
+.chat-bar {
+  width: 100%;
+}
+
+.send-icon {
+  color: var(--mat-sys-on-primary-container);
+  scale: 1.2;
+  transition: transform ease-in-out 0.3s;
+}
+
+.send-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: var(--mat-sys-tertiary);
+}

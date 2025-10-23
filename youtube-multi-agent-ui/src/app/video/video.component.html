@@ -1,0 +1,11 @@
+<mat-card class="video-card" appearance="outlined" (click)="onVideoClick()">
+  <mat-card-header>
+    <mat-card-title>{{video.name}}</mat-card-title>
+    <mat-card-subtitle>Creator</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="video.thumbnailUrl" [alt]="video.name">
+  <mat-card-content>
+    <p>Duration: {{video.duration | duration}}</p>
+    <p>Published: {{video.publishDate | date: 'dd/MM/yyyy'}}</p>
+  </mat-card-content>
+</mat-card>

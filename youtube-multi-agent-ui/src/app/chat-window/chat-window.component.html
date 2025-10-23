@@ -1,0 +1,11 @@
+@if(messages.length > 0) {
+<div class="chat-window">
+    @for (message of messages; track message.id) {
+        <app-chat-message [message]="message"></app-chat-message>
+    }
+</div>
+} @else {
+    <div class="empty-window">
+
+    </div>
+}
